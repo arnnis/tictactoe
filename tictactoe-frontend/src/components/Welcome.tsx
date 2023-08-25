@@ -7,7 +7,7 @@ interface WelcomeProps {
 }
 
 const Welcome: FC<WelcomeProps> = ({ setStep, previousSessions }) => {
-  const renderSession = ({ player1, player2, results }) => (
+  const renderSession = ({ player1, player2, results }: Session) => (
     <div className="flex w-full   mb-4 gap-10 bg-gray-700 p-4">
       <div className="flex flex-1 flex-col items-start bg-gray-800 p-3">
         <span className="text-gray-50 mb-2">

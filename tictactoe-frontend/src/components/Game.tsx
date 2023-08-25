@@ -60,7 +60,7 @@ const Game = () => {
     setStep('welcome');
   };
 
-  const handlePlayerNames = (name1, name2) => {
+  const handlePlayerNames = (name1: string, name2: string) => {
     setPlayer1(name1);
     setPlayer2(name2);
     setStep('game');
@@ -89,7 +89,7 @@ const Game = () => {
 };
 
 
-const calculateWinner = (board) => {
+const calculateWinner = (board: any[]) => {
     const winningCombos = [
       [0, 1, 2],
       [3, 4, 5],

@@ -25,18 +25,18 @@ const Board: FC<BoardProps> = ({
   handleContinue,
   handleStop,
 }) => {
-  const handleClick = (index) => {
+  const handleClick = (index: number) => {
     const newBoard = [...board]
     newBoard[index] = currentTurn
     setBoard(newBoard)
     setCurrentTurn(currentTurn === 'O' ? 'X' : 'O')
   }
 
-  const renderSquare = (index) => (
+  const renderSquare = (index: number) => (
     <button
       className="w-16 h-16 border border-gray-300 text-3xl font-semibold flex justify-center items-center"
       onClick={() => handleClick(index)}
-      disabled={board[index] || roundFinished}
+      disabled={!!board[index] || roundFinished}
     >
       {board[index]}
     </button>
