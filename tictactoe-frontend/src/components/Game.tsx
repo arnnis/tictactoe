@@ -3,6 +3,7 @@ import { toast } from 'react-hot-toast';
 import Welcome from './Welcome';
 import Inputs from './Inputs';
 import Board from './Board';
+import { API } from '../env';
 
 export interface Session {
   player1: string;
@@ -34,7 +35,7 @@ const Game = () => {
   }, [board]);
 
   const getPreviousSessions = async () => {
-    let res = await fetch('http://localhost:8000/sessions');
+    let res = await fetch(`${API}/sessions`);
     let data = await res.json();
     setPreviousSessions(data);
   };
@@ -47,7 +48,7 @@ const Game = () => {
 
   const handleStop = async () => {
     const id = toast.loading('Saving...');
-    await fetch('http://localhost:8000/sessions', {
+    await fetch('`${API}/sessions`', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
