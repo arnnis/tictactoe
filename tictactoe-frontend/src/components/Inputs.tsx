@@ -1,7 +1,11 @@
-import React, { useState } from 'react';
+import React, { FC, useState } from 'react';
 import toast from 'react-hot-toast';
 
-const Inputs = ({ handlePlayerNames }) => {
+interface InputsProps {
+  handlePlayerNames: (name1: string, name2: string) => void;
+}
+
+const Inputs: FC<InputsProps> = ({ handlePlayerNames }) => {
   const [player1Name, setPlayer1Name] = useState('');
   const [player2Name, setPlayer2Name] = useState('');
 

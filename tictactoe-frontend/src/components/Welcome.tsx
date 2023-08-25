@@ -1,6 +1,12 @@
-import React from 'react'
+import React, { FC } from 'react'
+import { Session } from './Game';
 
-const Welcome = ({ setStep, previousSessions }) => {
+interface WelcomeProps {
+  setStep: React.Dispatch<React.SetStateAction<string>>;
+  previousSessions: Session[]; // Update this with the correct data type
+}
+
+const Welcome: FC<WelcomeProps> = ({ setStep, previousSessions }) => {
   const renderSession = ({ player1, player2, results }) => (
     <div className="flex w-full   mb-4 gap-10 bg-gray-700 p-4">
       <div className="flex flex-1 flex-col items-start bg-gray-800 p-3">

@@ -1,6 +1,19 @@
-import React from 'react'
+import React, { FC } from 'react'
 
-const Board = ({
+interface BoardProps {
+  player1: string;
+  player2: string;
+  board: string[];
+  currentTurn: string;
+  roundFinished: boolean;
+  results: string[];
+  setBoard: React.Dispatch<React.SetStateAction<string[]>>;
+  setCurrentTurn: React.Dispatch<React.SetStateAction<string>>;
+  handleContinue: () => void;
+  handleStop: () => void;
+}
+
+const Board: FC<BoardProps> = ({
   player1,
   player2,
   board,

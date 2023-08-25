@@ -1,8 +1,14 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { toast } from 'react-hot-toast';
 import Welcome from './Welcome';
 import Inputs from './Inputs';
 import Board from './Board';
+
+export interface Session {
+  player1: string;
+  player2: string;
+  results: string[];
+}
 
 const Game = () => {
   const [step, setStep] = useState('welcome');
@@ -12,7 +18,7 @@ const Game = () => {
   const [currentTurn, setCurrentTurn] = useState('X');
   const [roundFinished, setRoundFinished] = useState(false);
   const [results, setResults] = useState<string[]>([]);
-  const [previousSessions, setPreviousSessions] = useState([]);
+  const [previousSessions, setPreviousSessions] = useState<Session[]>([]);
 
   useEffect(() => {
     getPreviousSessions();
