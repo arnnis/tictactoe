@@ -49,7 +49,7 @@ const Welcome: FC<WelcomeProps> = ({ setStep, previousSessions }) => {
   
   return (
     <>
-      <h1>Tick Tac Toe</h1>
+      <h1>Tic Tac Toe</h1>
       <div className="card">
         <button className="bg-blue-700" onClick={() => setStep('inputs')}>
           Start new game
