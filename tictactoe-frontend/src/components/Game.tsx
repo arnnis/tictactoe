@@ -57,6 +57,10 @@ const Game = () => {
     });
     toast.success('Saved', { id });
     getPreviousSessions();
+    setBoard(Array(9).fill(null));
+    setRoundFinished(false)
+    setResults([])
+    setCurrentTurn('X')
     setStep('welcome');
   };
 
