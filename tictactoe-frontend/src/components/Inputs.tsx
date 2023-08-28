@@ -22,13 +22,13 @@ const Inputs: FC<InputsProps> = ({ handlePlayerNames }) => {
       <input
         type="text"
         placeholder="Player 1"
-        className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+        className="text-gray-950 border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
         onChange={(e) => setPlayer1Name(e.target.value)}
       />
       <input
         type="text"
         placeholder="Player 2"
-        className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+        className="text-gray-950 border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
         onChange={(e) => setPlayer2Name(e.target.value)}
       />
       <button
