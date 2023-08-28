@@ -48,7 +48,7 @@ const Game = () => {
 
   const handleStop = async () => {
     const id = toast.loading('Saving...');
-    await fetch('`${API}/sessions`', {
+    await fetch(`${API}/sessions`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
